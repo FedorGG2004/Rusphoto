@@ -52,6 +52,7 @@ public class Tesseract extends AppCompatActivity implements ActivityCompat.OnReq
     private static final String DATA_PATH = Environment.getExternalStorageDirectory().toString() + "/TesseractSample/";
     private static final String TESSDATA = "tessdata";
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
@@ -62,7 +63,8 @@ public class Tesseract extends AppCompatActivity implements ActivityCompat.OnReq
         if (captureImg != null) {
             captureImg.setOnClickListener(v -> startCameraActivity());
         }
-        textView = (TextView) findViewById(R.id.textResult);
+        textView = findViewById(R.id.textResult);
+        button = findViewById(R.id.button3);
         button.setOnClickListener(v -> {
             Intent intent = new Intent(Tesseract.this, Speller.class);
             startActivity(intent);
