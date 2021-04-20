@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
         setContentView(binding.getRoot());
+        System.out.println("sssss");
     }
 
 }
