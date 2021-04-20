@@ -21,7 +21,6 @@ public class Speller extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.speller);
         binding = SpellerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 

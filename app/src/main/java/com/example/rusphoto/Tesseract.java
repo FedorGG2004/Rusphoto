@@ -26,6 +26,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.FileProvider;
 
+import com.example.rusphoto.databinding.ActivityMainBinding;
+import com.example.rusphoto.databinding.SpellerBinding;
+import com.example.rusphoto.databinding.TesseractBinding;
 import com.googlecode.tesseract.android.TessBaseAPI;
 
 import java.io.File;
@@ -38,12 +41,12 @@ import java.util.Date;
 
 
 public class Tesseract extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
+    TesseractBinding binding;
 
     private static final String TAG = Tesseract.class.getSimpleName();
     static final int PHOTO_REQUEST_CODE = 1;
     private TessBaseAPI tessBaseApi;
     TextView textView;
-    Button button;
     Uri outputFileUri;
     private static final String lang = "rus";
     String result = "empty";
@@ -52,18 +55,21 @@ public class Tesseract extends AppCompatActivity implements ActivityCompat.OnReq
     private static final String DATA_PATH = Environment.getExternalStorageDirectory().toString() + "/TesseractSample/";
     private static final String TESSDATA = "tessdata";
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tesseract);
+        binding = TesseractBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
         Button captureImg = (Button) findViewById(R.id.action_btn);
         if (captureImg != null) {
             captureImg.setOnClickListener(v -> startCameraActivity());
         }
-        textView = (TextView) findViewById(R.id.textResult);
-        button.setOnClickListener(v -> {
+
+        binding.button3.setOnClickListener(v -> {
             Intent intent = new Intent(Tesseract.this, Speller.class);
             startActivity(intent);
         });
