@@ -24,7 +24,7 @@ public class Story extends AppCompatActivity {
         binding = StoryBinding.inflate(getLayoutInflater());
 
         users = new ArrayList<>();
-        for(int i=0; i<10; i++){
+        for(int i=0; i<100; i++){
             users.add("Daniel # "+i);
         }
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
