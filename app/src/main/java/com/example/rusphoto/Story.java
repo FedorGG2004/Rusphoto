@@ -27,7 +27,7 @@ public class Story extends AppCompatActivity {
         for(int i=0; i<10; i++){
             users.add("Daniel # "+i);
         }
-        binding.recyclerView.setOnClickListener((View.OnClickListener) new LinearLayoutManager(this));
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new UserAdapter(users);
         binding.recyclerView.setAdapter(adapter);
 
