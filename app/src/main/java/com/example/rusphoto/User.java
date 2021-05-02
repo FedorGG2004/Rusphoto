@@ -1,15 +1,23 @@
 package com.example.rusphoto;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class User {
     public User(String name, String lastname, String email) {
         this.name = name;
         this.lastname = lastname;
         this.email = email;
     }
-
+    @PrimaryKey(autoGenerate = true)
     private int id;
+    @ColumnInfo(name = "first_name")
     private String name;
+    @ColumnInfo(name = "last_name")
     private String lastname;
+    @ColumnInfo(name = "email")
     private String email;
 
     public int getId() {
