@@ -15,7 +15,7 @@ public class Story extends AppCompatActivity {
     private static final String TAG = "Main Activity";
     RecyclerView.Adapter adapter;
     StoryBinding binding;
-    ArrayList<String> users;
+    ArrayList<User> users;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +24,8 @@ public class Story extends AppCompatActivity {
 
         users = new ArrayList<>();
         for(int i=0; i<100; i++){
-            users.add("Daniel # "+i);
+            User user = new User("Fedos # "+ i, "Goncharenko", "theopotter@yandex.ru");
+            users.add(user);
         }
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new UserAdapter(users);
