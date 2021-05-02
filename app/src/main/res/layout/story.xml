@@ -17,8 +17,8 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginBottom="68dp"
         android:text="Добавить запись"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

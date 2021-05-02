@@ -30,6 +30,7 @@
         <activity android:name=".Speller" />
         <activity android:name=".Tesseract" />
         <activity android:name=".Story" />
+        <activity android:name=".CreateUser" />
 
         <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="ocr"/>
     </application>

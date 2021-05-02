@@ -4,10 +4,8 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.audiofx.EnvironmentalReverb;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,19 +13,14 @@ import android.os.Environment;
 import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.core.content.FileProvider;
 
-import com.example.rusphoto.databinding.ActivityMainBinding;
-import com.example.rusphoto.databinding.SpellerBinding;
 import com.example.rusphoto.databinding.TesseractBinding;
 import com.googlecode.tesseract.android.TessBaseAPI;
 
@@ -36,8 +29,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 
 public class Tesseract extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
