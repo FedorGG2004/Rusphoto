@@ -21,7 +21,6 @@ public class Story extends AppCompatActivity {
 
         binding.recyclerView.setOnClickListener((View.OnClickListener) new LinearLayoutManager(this));
         adapter = new UserAdapter();
-        adapter = new AsdfAdapter();
         binding.recyclerView.setAdapter(adapter);
 
         binding.button.setOnClickListener(v -> {
