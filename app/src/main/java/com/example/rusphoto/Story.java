@@ -10,17 +10,25 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.rusphoto.databinding.StoryBinding;
 
+import java.util.ArrayList;
+
 public class Story extends AppCompatActivity {
     private static final String TAG = "Main Activity";
     RecyclerView.Adapter adapter;
     StoryBinding binding;
+    ArrayList<String> users;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.story);
         binding = StoryBinding.inflate(getLayoutInflater());
 
+        users = new ArrayList<>();
+        for(int i=0; i<10; i++){
+            users.add("Daniel # "+i);
+        }
         binding.recyclerView.setOnClickListener((View.OnClickListener) new LinearLayoutManager(this));
-        adapter = new UserAdapter();
+        adapter = new UserAdapter(users);
         binding.recyclerView.setAdapter(adapter);
 
         binding.button.setOnClickListener(v -> {
