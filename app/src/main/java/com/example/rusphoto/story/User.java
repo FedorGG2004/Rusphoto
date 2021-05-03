@@ -20,6 +20,10 @@ public class User {
     @ColumnInfo(name = "email")
     private String email;
 
+    public User() {
+
+    }
+
     public int getId() {
         return id;
     }

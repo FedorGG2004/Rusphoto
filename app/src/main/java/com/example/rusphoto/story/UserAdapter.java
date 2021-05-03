@@ -12,7 +12,7 @@ import com.example.rusphoto.R;
 import java.util.List;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
-    List<User> users;
+    public List<User> users;
     public UserAdapter(List<User> users) {
         this.users = users;
     }
@@ -28,8 +28,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         holder.firstName.setText(users.get(position).getName());
         holder.lastName.setText(users.get(position).getLastname());
         holder.email.setText(users.get(position).getEmail());
-
-
     }
 
     @Override
