@@ -1,10 +1,9 @@
 package com.example.rusphoto.story;
 
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
-
-import com.example.rusphoto.story.User;
 
 import java.util.List;
 
@@ -15,4 +14,7 @@ public interface UserDao {
 
     @Insert
     void insertAll(User... users);
+
+    @Delete
+    void deleteUser(User... users);
 }
