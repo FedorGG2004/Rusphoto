@@ -1,4 +1,4 @@
-package com.example.rusphoto;
+package com.example.rusphoto.tesseract;
 
 import android.app.Activity;
 import android.app.Fragment;

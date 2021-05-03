@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.rusphoto.databinding.ActivityMainBinding;
 import com.example.rusphoto.story.Story;
+import com.example.rusphoto.tesseract.Tesseract;
 
 
 public class MainActivity extends AppCompatActivity {

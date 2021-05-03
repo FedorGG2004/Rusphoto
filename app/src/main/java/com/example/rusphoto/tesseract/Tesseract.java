@@ -1,4 +1,4 @@
-package com.example.rusphoto;
+package com.example.rusphoto.tesseract;
 
 import android.Manifest;
 import android.app.Activity;
@@ -21,6 +21,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.example.rusphoto.R;
+import com.example.rusphoto.Speller;
 import com.example.rusphoto.databinding.TesseractBinding;
 import com.googlecode.tesseract.android.TessBaseAPI;
 

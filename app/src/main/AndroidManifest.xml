@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Speller" />
-        <activity android:name=".Tesseract" />
+        <activity android:name=".tesseract.Tesseract" />
         <activity android:name=".story.Story" />
         <activity android:name=".story.CreateUser" />
 

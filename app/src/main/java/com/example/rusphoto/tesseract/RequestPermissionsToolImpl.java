@@ -1,4 +1,4 @@
-package com.example.rusphoto;
+package com.example.rusphoto.tesseract;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -10,9 +10,6 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import androidx.core.app.ActivityCompat;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 import java.util.HashMap;
 import java.util.Map;
