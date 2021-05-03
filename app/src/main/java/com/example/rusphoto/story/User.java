@@ -1,4 +1,4 @@
-package com.example.rusphoto;
+package com.example.rusphoto.story;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

@@ -1,4 +1,4 @@
-package com.example.rusphoto;
+package com.example.rusphoto.story;
 
 import androidx.room.Database;
 import androidx.room.RoomDatabase;

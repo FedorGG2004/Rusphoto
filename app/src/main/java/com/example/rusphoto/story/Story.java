@@ -1,4 +1,4 @@
-package com.example.rusphoto;
+package com.example.rusphoto.story;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
+import com.example.rusphoto.R;
 import com.example.rusphoto.databinding.StoryBinding;
 
 import java.util.List;

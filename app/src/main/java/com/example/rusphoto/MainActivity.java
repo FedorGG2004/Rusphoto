@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.rusphoto.databinding.ActivityMainBinding;
+import com.example.rusphoto.story.Story;
 
 
 public class MainActivity extends AppCompatActivity {

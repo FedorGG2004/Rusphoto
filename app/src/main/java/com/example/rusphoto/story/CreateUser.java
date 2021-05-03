@@ -1,4 +1,4 @@
-package com.example.rusphoto;
+package com.example.rusphoto.story;
 
 import android.content.Intent;
 import android.os.Bundle;
