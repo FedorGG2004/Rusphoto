@@ -56,9 +56,7 @@ dependencies {
 
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:support-compat:+'
-    implementation 'com.android.support:appcompat-v7:+'
-    implementation "com.android.support:support-core-utils:+"
+    implementation 'com.google.android.material:material:1.1.0-alpha10'
 
     implementation 'com.rmtheis:tess-two:6.0.2'
 
