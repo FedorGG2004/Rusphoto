@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, Story.class);
             startActivity(intent);
         });
+
         setContentView(binding.getRoot());
     }
 
