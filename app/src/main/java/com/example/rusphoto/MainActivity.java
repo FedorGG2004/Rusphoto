@@ -2,17 +2,15 @@ package com.example.rusphoto;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.rusphoto.fragments.HomeFragment;
 import com.example.rusphoto.fragments.StoryFragment;
-import com.example.rusphoto.fragments.SmsFragment;
+import com.example.rusphoto.fragments.CameraFragment;
 
 import com.example.rusphoto.story.Story;
 import com.example.rusphoto.tesseract.Tesseract;
@@ -46,13 +44,12 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.navigation_home:
                         openFragment(HomeFragment.newInstance("", ""));
                         return true;
-                    case R.id.navigation_sms:
-                        openFragment(SmsFragment.newInstance("", ""));
-                        return true;
-                    case R.id.story_notifications:
+                    case R.id.navigation_camera:
+                        openFragment(CameraFragment.newInstance("", ""));
+                        startActivity(new Intent(MainActivity.this, Tesseract.class));
+                    case R.id.navigation_story:
                         openFragment(StoryFragment.newInstance("", ""));
-                        Intent intent = new Intent(MainActivity.this, Story.class);
-                        startActivity(intent);
+                        startActivity(new Intent(MainActivity.this, Story.class));
                 }
                 return false;
             };
