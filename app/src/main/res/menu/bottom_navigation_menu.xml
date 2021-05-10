@@ -11,7 +11,7 @@
         android:title="SMS" />
 
     <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications"
-        android:title="Notification" />
+        android:id="@+id/story_notifications"
+        android:icon="@drawable/ic_story"
+        android:title="История" />
 </menu>
