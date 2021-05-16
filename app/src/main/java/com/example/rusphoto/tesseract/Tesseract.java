@@ -50,9 +50,9 @@ public class Tesseract extends AppCompatActivity implements ActivityCompat.OnReq
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        System.out.println("camera_activity_1111111111111111111111111111");
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
-
         super.onCreate(savedInstanceState);
         binding = TesseractBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());

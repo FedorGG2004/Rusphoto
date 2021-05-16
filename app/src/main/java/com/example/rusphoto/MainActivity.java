@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.rusphoto.fragments.SearchFragment;
+import com.example.rusphoto.fragments.HomeFragment;
 import com.example.rusphoto.fragments.StoryFragment;
 import com.example.rusphoto.fragments.CameraFragment;
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
-        openFragment(SearchFragment.newInstance("", ""));
+        openFragment(HomeFragment.newInstance("", ""));
 
 
     }
@@ -42,13 +42,15 @@ public class MainActivity extends AppCompatActivity {
             item -> {
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
-                        openFragment(SearchFragment.newInstance("", ""));
+                        openFragment(HomeFragment.newInstance("", ""));
                         return true;
                     case R.id.navigation_camera:
                         openFragment(CameraFragment.newInstance("", ""));
+                        System.out.println("camera_activity                               ");
                         startActivity(new Intent(MainActivity.this, Tesseract.class));
                     case R.id.navigation_story:
                         openFragment(StoryFragment.newInstance("", ""));
+                        System.out.println("story_activity                                  ");
                         startActivity(new Intent(MainActivity.this, Story.class));
                 }
                 return false;
